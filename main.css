@@ -1,0 +1,181 @@
+/*---alapok---*/
+body{
+	font-size: 16px;
+	font font-weight: 300;
+	font-family: 'Kodchasan', sans-serif;
+}
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+img{
+	max-width: 100%;
+}
+a {
+		text-decoration: none;
+		color: #000000;
+}
+/*---alapok vege---*/
+
+
+/*---layout---*/
+	body{
+		display: grid;
+		grid-template-areas: 
+			"fejlec"
+			"foresz"
+			"lablec";
+		grid-template-rows: max-content 1fr max-content;
+		min-height: 100vh;
+
+	}
+	header{
+		background-color: #935116;
+		grid-area: fejlec;
+	}
+	main{
+		background-color: #F5CBA7;
+		grid-area: foresz;
+	}
+	footer{
+        background-color: #935116;
+        grid-area: lablec;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #FAE5D3;
+	}
+/*---layout vege---*/
+
+/*---kozos fejlec---*/
+	.gomb{
+		display: inline-block;
+		text-align: center;
+		border: 2px solid black;
+		background-color: #F5CBA7;
+		padding: 0.5rem 1rem;
+		margin: 0.5rem 0.5rem;
+		border-radius: 2rem;
+		transition: .3s;
+	}
+	.gomb:hover{
+		cursor: pointer;
+		background-color: #FDF2E9;
+	}
+	.akt{
+		background-color: #FDF2E9;
+	}
+/*---kozos fejlec vege---*/
+
+/*---kezdooldal---*/
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+		box-sizing: border-box;
+		grid-gap: 10%;
+		margin: 1rem 15%;
+	}
+	.kartya{
+		display: block;
+		background-color: #F0B27A;
+		border-radius: 1rem;
+		padding: 1rem;
+		max-height: content;
+	}
+	.kartya img{
+		border-radius: 1rem;
+		min-width: 20%;
+	}
+	.focim{
+		font-size: 3rem;
+	}
+	.alcim{
+		margin-top: .5rem;
+		color: #212121;
+	}
+	.szoveg{
+		font-size: 1.2rem;
+		margin-top: 2rem;
+	}
+/*---kezdooldal vege---*/
+
+/*---rajzok---*/
+	.gridracs{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.kepkartya{
+		flex-grow: 1;
+		background-color: #F0B27A;
+		text-align: center;
+		margin: 1rem 30% 3rem 30%;
+		padding: 1rem;
+		border-radius: 2rem;
+	}
+	.kep img{
+		border-radius: .2rem;
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	.kepkartya span{
+		font-size: 1.2rem;
+	}
+/*---rajzok vege---*/
+
+/*---tervezes---*/
+	.grid2{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+		box-sizing: border-box;
+		grid-gap: 5%;
+		margin: 5rem 5%;
+	}
+	.kartya_tervezes{
+		display: block;
+		background-color: #F0B27A;
+		border-radius: 1rem;
+		padding: 1rem;
+		max-height: content;
+		margin-bottom: 4rem;
+	}
+	.kartya_tervezes img{
+		border-radius: .4rem;
+		min-width: 20%;
+	}
+/*---tervezes vege---*/
+
+/*---dokumentacio---*/
+	.grid_dok{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+		box-sizing: border-box;
+		grid-gap: 10%;
+		margin: 1rem 10% 4rem 10%;
+	}
+	.kartya_dok{
+		display: block;
+		background-color: #F0B27A;
+		border-radius: 1rem;
+		padding: 1rem;
+		max-height: content;
+	}
+	.kartya_dok img{
+		border-radius: .2rem;
+		min-width: 20%;
+		padding-bottom: 1rem;
+	}
+	.kartya_dok p{
+		font-size: 1.2rem;
+		color: #212121;
+		padding-top: 3rem;
+	}
+/*---dokumentacio vege---*/
+
+/*---kozos lablec---*/
+	.lablec{
+		text-align: center;
+		margin: 0.5rem;
+	}
+/*---kozos lablec vege---*/
